@@ -4,6 +4,80 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 8s ease infinite;
+}
+@keyframes neon-glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.neon-btn {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000),
+    linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: 400% 400%;
+  animation: neon-glow 6s linear infinite;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  color: #000;
+  background-image: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+}
+
+.neon-skill {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4),
+              0 0 20px rgba(0, 255, 255, 0.3);
+}
+.neon-skill:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.6),
+              0 0 30px rgba(0, 255, 255, 0.5),
+              0 0 45px rgba(255, 255, 0, 0.4);
+}
+
+.neon-input {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
+}
+.neon-input:focus {
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.6),
+              0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.neon-icon {
+  transition: all 0.3s ease;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.6),
+               0 0 20px rgba(0, 255, 255, 0.4);
+}
+.neon-icon:hover {
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8),
+               0 0 30px rgba(0, 255, 255, 0.6),
+               0 0 45px rgba(255, 0, 255, 0.6);
+}
+.neon-footer-btn {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+              0 0 20px rgba(255, 0, 255, 0.4);
+}
+.neon-footer-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8),
+              0 0 30px rgba(0, 255, 255, 0.6),
+              0 0 45px rgba(255, 0, 255, 0.6);
+}
 
 @theme inline {
   --color-background: var(--background);
