@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" }, // Solar project section
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ];
@@ -53,7 +54,7 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 shadow-lg animate-gradient-x"
+            ? "bg-gradient-to-r from-indigo-700 via-green-600 to-yellow-500 shadow-lg animate-gradient-x"
             : "bg-transparent"
         }`}
       >
@@ -64,7 +65,7 @@ export default function Navbar() {
             whileHover={{ rotate: -5, scale: 1.1 }}
             className="text-2xl font-extrabold text-white tracking-wide cursor-pointer"
           >
-            Taha Murshed
+            Amirah Sofyani
           </motion.h1>
 
           {/* Desktop Menu */}
@@ -78,7 +79,9 @@ export default function Navbar() {
                 variants={linkVariants}
                 className="group relative"
               >
-                <Link href={link.href}>{link.name}</Link>
+                <Link href={link.href} aria-label={`Navigate to ${link.name}`}>
+                  {link.name}
+                </Link>
                 {/* Magic underline */}
                 <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-yellow-400 rounded-full transition-all duration-300 group-hover:w-full"></span>
               </motion.div>
@@ -86,8 +89,9 @@ export default function Navbar() {
 
             {/* Download CV button */}
             <a
-              href="/taha's cv ats.pdf" // Place your CV file inside public/
+              href="/Amirah_Sofyani_CV.pdf" // Place your CV inside public/
               download
+              aria-label="Download Amirah Sofyani CV"
               className="px-4 py-2 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 transition ml-4"
             >
               Download CV
@@ -97,9 +101,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden text-white text-3xl">
             {open ? (
-              <FiX onClick={() => setOpen(false)} />
+              <FiX onClick={() => setOpen(false)} aria-label="Close menu" />
             ) : (
-              <FiMenu onClick={() => setOpen(true)} />
+              <FiMenu onClick={() => setOpen(true)} aria-label="Open menu" />
             )}
           </div>
         </div>
@@ -112,7 +116,7 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="md:hidden bg-gradient-to-b from-purple-700 to-pink-700 text-white px-6 py-6 space-y-6"
+              className="md:hidden bg-gradient-to-b from-green-700 to-yellow-600 text-white px-6 py-6 space-y-6"
             >
               {navLinks.map((link, i) => (
                 <motion.div
@@ -123,7 +127,11 @@ export default function Navbar() {
                   variants={linkVariants}
                   className="text-lg font-medium"
                 >
-                  <Link href={link.href} onClick={() => setOpen(false)}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    aria-label={`Navigate to ${link.name}`}
+                  >
                     {link.name}
                   </Link>
                 </motion.div>
@@ -131,7 +139,7 @@ export default function Navbar() {
 
               {/* CV button mobile */}
               <a
-                href="/taha-cv.pdf"
+                href="/Amirah_Sofyani_CV.pdf"
                 download
                 className="block text-center px-4 py-2 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 transition"
               >
@@ -158,6 +166,7 @@ export default function Navbar() {
             transition={{ duration: 0.4 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="fixed bottom-6 right-6 p-3 rounded-full bg-yellow-400 text-black shadow-lg hover:bg-yellow-300 transition-colors z-50"
+            aria-label="Scroll to top"
           >
             <FiArrowUp size={22} />
           </motion.button>

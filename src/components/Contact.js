@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-gray-900 text-white px-6 md:px-16"
+      className="relative py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-green-900 text-white px-6 md:px-16"
     >
       {/* Section Title */}
       <motion.h2
@@ -23,8 +23,11 @@ export default function Contact() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="max-w-2xl mx-auto text-center text-lg text-gray-300 mb-12"
       >
-        Let’s build something amazing together! Fill out the form or reach me
-        through my social media links below.
+        I’d love to connect and collaborate on{" "}
+        <span className="text-yellow-400">
+          AI, data science, or web development
+        </span>{" "}
+        projects. Send me a message or reach out via my social links below.
       </motion.p>
 
       <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -33,7 +36,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 bg-gradient-to-br from-purple-800 to-indigo-800 p-8 rounded-xl shadow-lg"
+          className="space-y-6 bg-gradient-to-br from-indigo-800 to-green-800 p-8 rounded-xl shadow-lg"
         >
           <input
             type="text"
@@ -69,38 +72,29 @@ export default function Contact() {
           <p className="text-lg text-gray-300 mb-4">You can also find me on:</p>
           <div className="flex gap-6 text-3xl">
             <a
-              href="mailto:your@email.com"
-              className="neon-icon"
+              href="mailto:amirah.sufyani@gmail.com"
+              className="neon-icon hover:text-yellow-400 transition"
               aria-label="Email"
             >
               <FaEnvelope />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Amira22rr"
               target="_blank"
               rel="noopener noreferrer"
-              className="neon-icon"
+              className="neon-icon hover:text-yellow-400 transition"
               aria-label="GitHub"
             >
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/amirah-sofyani"
               target="_blank"
               rel="noopener noreferrer"
-              className="neon-icon"
+              className="neon-icon hover:text-yellow-400 transition"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neon-icon"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
             </a>
           </div>
         </motion.div>

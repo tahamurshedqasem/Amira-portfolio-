@@ -6,50 +6,43 @@ import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
-      title: "EduPortal",
-      desc: "A full-stack learning platform for international exams (TIMSS, PISA, PIRLS, TOEFL). Built with Next.js, Laravel, Flask, and integrated ML models.",
+      title: "AI-Driven Solar Energy Efficiency",
+      desc: "Developed an AI-powered control system to optimize solar energy efficiency by analyzing weather data and predicting performance. Focused on renewable energy and sustainability.",
       tech: [
-        "Next.js",
-        "Tailwind CSS",
-        "Laravel",
+        "Python",
+        "Scikit-learn",
         "Flask",
+        "Next.js",
+        "Laravel",
         "MySQL",
-        "Machine Learning",
+        "Docker",
       ],
-      img: "/projects/eduportal.png",
-      demo: "https://eduportal.pro",
-      github: "https://github.com/tahamurshedqasem/EduPortal-website",
+      img: "/projects/solar.png", // Add your project image in public/projects
+      demo: "#", // Replace with link if you have a live demo
+      github: "https://github.com/Amira22rr/solar-backend", // Replace with your repo link
     },
-    {
-      title: "ShelfSmart",
-      desc: "An AI-powered smart shelf system that manages inventory, detects missing products, and provides analytics. Built with Next.js and Tailwind CSS.",
-      tech: ["Next.js", "Tailwind CSS", "AI/ML"],
-      img: "/projects/shelfsmart.png",
-      demo: "https://shelfsmart-git-main-tahas-projects-bdab7f35.vercel.app?_vercel_share=42Uge8po5G2msK6270ZQt7Aw8PlaKdoU",
-      github: "https://github.com/tahamurshedqasem/ShelfSmart",
-    },
-    {
-      title: "Musanada Travels",
-      desc: "A modern travel agency platform offering destinations, packages, and booking management. Focused on user-friendly design for Arabic users.",
-      tech: ["Next.js", "Tailwind CSS"],
-      img: "/projects/musnada.png",
-      demo: "https://musanada-travels-git-main-tahas-projects-bdab7f35.vercel.app?_vercel_share=14vKQLriqTfnyV6HMpx3h3PxVhrOk1Iy",
-      github: "https://github.com/tahamurshedqasem/Musanada-Travels",
-    },
-    {
-      title: "PcapVision",
-      desc: "An AI-powered platform that analyzes .pcap network files, detects suspicious activities, and provides visual insights for security decisions.",
-      tech: ["Next.js", "Flask", "Laravel", "Cybersecurity"],
-      img: "/projects/pcap.png",
-      demo: "https://pcap-frontend-git-main-tahas-projects-bdab7f35.vercel.app?_vercel_share=dAxeGT7aQLcu4Bv0w7JDMP183JLZsvVc",
-      github: "https://github.com/tahamurshedqasem/pcap-frontend",
-    },
+    // {
+    //   title: "Cybersecurity Challenges (CTF)",
+    //   desc: "Hands-on participation in Capture The Flag competitions focusing on penetration testing, network security, and problem-solving.",
+    //   tech: ["CTF Tools", "Linux", "Python", "Networking"],
+    //   img: "/projects/cyber.png", // Replace with relevant image
+    //   demo: "#",
+    //   github: "#",
+    // },
+    // {
+    //   title: "AI & Data Science Mini Projects",
+    //   desc: "Explored machine learning models, natural language processing, and data analysis as part of academic and personal learning journey.",
+    //   tech: ["Python", "Pandas", "Scikit-learn", "Jupyter"],
+    //   img: "/projects/datasci.png",
+    //   demo: "#",
+    //   github: "#",
+    // },
   ];
 
   return (
     <section
       id="projects"
-      className="relative py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white px-6 md:px-16"
+      className="relative py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-green-900 text-white px-6 md:px-16"
     >
       {/* Section Title */}
       <motion.h2
@@ -66,8 +59,11 @@ export default function Projects() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="max-w-2xl mx-auto text-center text-lg text-gray-300 mb-12"
       >
-        Here are some of the main projects I’ve built — combining web
-        development, machine learning, and real-world problem solving.
+        Some of the key projects I’ve worked on — blending{" "}
+        <span className="text-yellow-400">
+          AI, programming, and real-world applications
+        </span>
+        .
       </motion.p>
 
       {/* Projects Grid */}
@@ -79,7 +75,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
             whileHover={{ scale: 1.05 }}
-            className="relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-800 to-indigo-800 hover:shadow-2xl hover:shadow-yellow-400/40 transition"
+            className="relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-indigo-800 to-green-800 hover:shadow-2xl hover:shadow-yellow-400/40 transition"
           >
             {/* Image */}
             <div className="relative h-52 w-full overflow-hidden">
@@ -110,22 +106,26 @@ export default function Projects() {
 
               {/* Buttons */}
               <div className="flex gap-4">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
-                >
-                  <FaExternalLinkAlt /> Demo
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-yellow-400 hover:bg-yellow-400 hover:text-black transition"
-                >
-                  <FaGithub /> Code
-                </a>
+                {project.demo !== "#" && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
+                  >
+                    <FaExternalLinkAlt /> Demo
+                  </a>
+                )}
+                {project.github !== "#" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg border border-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+                  >
+                    <FaGithub /> Code
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

@@ -24,21 +24,21 @@ export default function Hero() {
     <section
       id="home"
       className="relative min-h-screen flex flex-col md:flex-row items-center justify-center 
-      bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-600 text-white overflow-hidden 
-      px-6 md:px-16 pt-24 md:pt-32"
+  bg-gradient-to-br from-gray-900 via-indigo-900 to-black text-white overflow-hidden 
+  px-6 md:px-16 pt-24 md:pt-32"
     >
       {/* Floating Background Circles */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-20 left-20 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl"
+        className="absolute top-20 left-20 w-72 h-72 bg-green-500/30 rounded-full blur-3xl"
       />
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [1, 1.3, 1] }}
         transition={{ duration: 12, repeat: Infinity }}
-        className="absolute bottom-32 right-24 w-96 h-96 bg-pink-500/30 rounded-full blur-3xl"
+        className="absolute bottom-32 right-24 w-96 h-96 bg-yellow-500/30 rounded-full blur-3xl"
       />
 
       {/* Left Content */}
@@ -49,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight"
         >
-          Hi, I’m <span className="text-yellow-400">Taha Murshed</span>
+          Hi, I’m <span className="text-yellow-300">Amirah Sofyani</span>
         </motion.h1>
 
         <motion.h2
@@ -60,9 +60,9 @@ export default function Hero() {
         >
           <Typewriter
             words={[
-              "Full Stack Web Developer 💻",
-              "Machine Learning Enthusiast 🤖",
-              "Data Analyst 📊",
+              "AI & Data Science Enthusiast 🤖",
+              "Solar Energy Innovator ☀️",
+              "Cybersecurity Learner 🔐",
             ]}
             loop
             cursor
@@ -82,13 +82,15 @@ export default function Hero() {
         >
           <a
             href="#projects"
+            aria-label="View my projects"
             className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-purple-700 transition"
+            aria-label="Contact me"
+            className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-green-700 transition"
           >
             Contact Me
           </a>
@@ -102,10 +104,11 @@ export default function Hero() {
           className="mt-6"
         >
           <a
-            href="/taha's cv ats.pdf"
+            href="/Amirah_Sofyani_CV.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Download Amirah Sofyani CV"
             className="relative inline-block px-8 py-3 font-semibold rounded-lg overflow-hidden neon-btn"
           >
             Download CV
@@ -127,8 +130,8 @@ export default function Hero() {
         >
           <div className="relative w-full h-full rounded-full overflow-hidden">
             <Image
-              src="/avatar.jpg"
-              alt="Taha Murshed"
+              src="/avatar.png" // Replace with your photo
+              alt="Portrait of Amirah Sofyani"
               fill
               className="object-cover"
             />
@@ -142,7 +145,7 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-6 md:bottom-10 cursor-pointer"
       >
-        <FiArrowDownCircle size={40} className="text-yellow-400" />
+        <FiArrowDownCircle size={40} className="text-yellow-300" />
       </motion.div>
     </section>
   );

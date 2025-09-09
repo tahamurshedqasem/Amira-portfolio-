@@ -7,39 +7,38 @@ export default function About() {
     {
       icon: <FaGraduationCap />,
       title: "Bachelor of Computer Science",
-      place:
-        "Sana’a University – College of Computer and Information Technology",
-      date: "2024 - 2025",
-      desc: "Focused on core computer science subjects with strong emphasis on software engineering, web development, and system design.",
+      place: "Jazan University – College of Computer Science",
+      date: "2022 - Expected 2026",
+      desc: "Focused on core computer science subjects with strong emphasis on artificial intelligence, data science, and modern web development.",
     },
     {
       icon: <FaBriefcase />,
-      title: "Intern - Tamam Company",
-      place: "Sana’a, Yemen",
-      date: "Aug 2024 – Dec 2024",
-      desc: "Developed and maintained full-stack applications using Laravel and Vue.js. Assisted in backend development, API integration, and database management. Gained hands-on experience in project management and team collaboration.",
+      title: "AI-Driven Solar Energy Efficiency Project",
+      place: "Academic Project",
+      date: "2024",
+      desc: "Developed an AI-powered control system to optimize solar energy efficiency by analyzing weather data and predicting performance. Used Python, Scikit-learn, Flask, Next.js, Laravel, MySQL, and Docker.",
     },
   ];
 
   const skills = [
-    "PHP (Laravel)",
+    "Python (AI & ML)",
+    "Java",
+    "JavaScript",
     "Flask",
-    "React.js",
     "Next.js",
-    "Vue.js",
-    "Bootstrap",
-    "Tailwind CSS",
-    "SQLite",
-    "Python (ML & Data Analysis)",
+    "Laravel",
+    "MySQL",
     "Docker",
     "Git/GitHub",
-    "UML & Agile",
+    "Cybersecurity Basics (CTF)",
+    "Data Analysis",
+    "Teamwork & Problem Solving",
   ];
 
   return (
     <section
       id="about"
-      className="relative py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white px-6 md:px-16"
+      className="relative py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-green-900 text-white px-6 md:px-16"
     >
       {/* Section Title */}
       <motion.h2
@@ -56,15 +55,18 @@ export default function About() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="max-w-2xl mx-auto text-center text-lg text-gray-300 mb-12"
       >
-        Motivated and detail-oriented Full Stack Web Developer with expertise in
-        Laravel, Vue.js, React, and Next.js. Skilled in backend and frontend
-        development, machine learning, and data analysis. Passionate about
-        building scalable and efficient applications.
+        Aspiring computer science professional passionate about{" "}
+        <span className="text-yellow-400">
+          AI, data science, and cybersecurity
+        </span>
+        . I enjoy creating intelligent applications and exploring innovations in
+        renewable energy such as solar efficiency optimization. Skilled in
+        full-stack web development and AI-powered solutions.
       </motion.p>
 
       {/* Timeline */}
       <div className="max-w-4xl mx-auto mb-16 relative">
-        <div className="absolute left-6 top-0 bottom-0 w-[3px] bg-gradient-to-b from-yellow-400 to-pink-500"></div>
+        <div className="absolute left-6 top-0 bottom-0 w-[3px] bg-gradient-to-b from-yellow-400 to-green-400"></div>
         {timeline.map((item, i) => (
           <motion.div
             key={i}
@@ -73,7 +75,7 @@ export default function About() {
             transition={{ duration: 0.7, delay: i * 0.2 }}
             className="relative pl-16 mb-12"
           >
-            <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 text-black shadow-lg">
+            <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-yellow-400 text-black shadow-lg">
               {item.icon}
             </div>
             <h3 className="text-2xl font-semibold">{item.title}</h3>
@@ -100,7 +102,7 @@ export default function About() {
           <motion.div
             key={i}
             whileHover={{ scale: 1.1 }}
-            className="p-4 text-center rounded-lg bg-gradient-to-br from-purple-800 to-indigo-800 shadow-lg neon-skill cursor-pointer"
+            className="p-4 text-center rounded-lg bg-gradient-to-br from-indigo-800 to-green-800 shadow-lg neon-skill cursor-pointer"
           >
             <FaCode className="text-yellow-400 text-3xl mx-auto mb-2" />
             <span className="font-medium">{skill}</span>
