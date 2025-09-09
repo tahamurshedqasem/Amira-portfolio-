@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Left - Copyright */}
         <p className="text-gray-400 text-sm">
           © {new Date().getFullYear()}{" "}
-          <span className="text-yellow-400">Taha Murshed</span>. All rights
+          <span className="text-yellow-400">Amirah Sofyani</span>. All rights
           reserved.
         </p>
 
