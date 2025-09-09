@@ -14,34 +14,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Taha Murshed | Full Stack Web Developer & ML Enthusiast",
+  title: "Amirah Sofyani | AI & Data Science Enthusiast | Full Stack Developer",
   description:
-    "Portfolio of Taha Murshed Qasem Mahdi – Full Stack Web Developer, Machine Learning Enthusiast, and Data Analyst. Explore my projects in Next.js, Laravel, Flask, and AI solutions.",
+    "Portfolio of Amirah Sofyani – Computer Science student at Jazan University. Passionate about AI, Data Science, Cybersecurity, and Renewable Energy projects including AI-driven Solar Energy Efficiency.",
   keywords: [
-    "Taha Murshed",
+    "Amirah Sofyani",
     "Portfolio",
+    "Computer Science",
     "Full Stack Developer",
+    "Python",
+    "Java",
+    "JavaScript",
     "Next.js",
     "React",
-    "Laravel",
     "Flask",
+    "Laravel",
+    "MySQL",
+    "Docker",
+    "AI",
+    "Data Science",
+    "Cybersecurity",
+    "Solar Energy",
     "Machine Learning",
-    "Data Analyst",
-    "Web Development",
   ],
-  authors: [{ name: "Taha Murshed Qasem Mahdi" }],
+  authors: [{ name: "Amirah Sofyani" }],
   openGraph: {
-    title: "Taha Murshed | Full Stack Web Developer & ML Enthusiast",
+    title:
+      "Amirah Sofyani | AI & Data Science Enthusiast | Full Stack Developer",
     description:
-      "Portfolio of Taha Murshed Qasem Mahdi – showcasing projects in Next.js, Laravel, Flask, and Machine Learning.",
-    url: "https://tahamurshed.com", // replace with your real domain
-    siteName: "Taha Murshed Portfolio",
+      "Portfolio of Amirah Sofyani – showcasing projects in AI, Data Science, Web Development, and Renewable Energy.",
+    url: "https://amirahsofyani.com", // replace with your real domain
+    siteName: "Amirah Sofyani Portfolio",
     images: [
       {
-        url: "/avatar.jpg", // should be in public/
+        url: "/avatar.jpg", // keep in public/
         width: 800,
         height: 600,
-        alt: "Taha Murshed Portfolio Preview",
+        alt: "Amirah Sofyani Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -49,9 +58,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taha Murshed | Full Stack Developer & ML Enthusiast",
+    title: "Amirah Sofyani | AI & Data Science Enthusiast",
     description:
-      "Explore the portfolio of Taha Murshed – Full Stack Developer & Machine Learning Enthusiast.",
+      "Explore the portfolio of Amirah Sofyani – AI-driven projects, data science, and renewable energy solutions.",
     images: ["/avatar.jpg"],
   },
 };
@@ -60,10 +69,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-950 text-white`}
       >
         <Navbar />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
